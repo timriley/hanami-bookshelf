@@ -1,0 +1,13 @@
+<%= form_for :book, routes.path(:book, id: book.id), method: :patch do |f| %>
+  <div>
+    <%= f.label "Title", for: :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label "Author", for: :author %>
+    <%= f.text_field :author %>
+  </div>
+  <div>
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

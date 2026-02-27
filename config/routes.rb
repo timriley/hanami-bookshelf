@@ -5,6 +5,6 @@ module Bookshelf
     # Add your routes here. See https://guides.hanamirb.org/routing/overview/ for details.
 
     root to: "home.index"
-    resources :books, only: [:index, :show, :new, :create]
+    resources :books, only: [:index, :show, :new, :create, :edit, :update]
   end
 end

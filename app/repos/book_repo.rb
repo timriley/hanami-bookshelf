@@ -7,6 +7,10 @@ module Bookshelf
         books.changeset(:create, attributes).commit
       end
 
+      def update(id, attributes)
+        books.by_pk(id).changeset(:update, attributes).commit
+      end
+
       def get(id)
         books.by_pk(id).one!
       end
