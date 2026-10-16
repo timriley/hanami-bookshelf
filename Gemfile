@@ -2,34 +2,41 @@
 
 source "https://rubygems.org"
 
-gem "hanami", "~> 2.3.0"
-gem "hanami-assets", "~> 2.3.0"
-gem "hanami-controller", "~> 2.3.0"
-gem "hanami-db", "~> 2.3.0"
-gem "hanami-router", "~> 2.3.0"
-gem "hanami-validations", "~> 2.3.0"
-gem "hanami-view", "~> 2.3.0"
+gem "hanami", github: "hanami/hanami", branch: "main"
+gem "hanami-action", github: "hanami/hanami-action", branch: "main"
+gem "hanami-assets", github: "hanami/hanami-assets", branch: "main"
+gem "hanami-cli", github: "hanami/hanami-cli", branch: "main"
+gem "hanami-db", github: "hanami/hanami-db", branch: "main"
+gem "hanami-router", github: "hanami/hanami-router", branch: "main"
+gem "hanami-utils", github: "hanami/hanami-utils", branch: "main"
+gem "hanami-view", github: "hanami/hanami-view", branch: "main"
+
+# Unreleased dependencies for Hanami main branches
+gem "dry-cli", github: "dry-rb/dry-cli", branch: "main"
+gem "dry-operation", github: "dry-rb/dry-operation", branch: "main"
+gem "dry-system", github: "dry-rb/dry-system", branch: "main"
 
 gem "dry-types", "~> 1.7"
-gem "dry-operation", ">= 1.0.1"
-gem "puma"
+gem "dry-validation"
+gem "puma", ">= 7.0"
 gem "rake"
 gem "sqlite3"
 
 group :development do
-  gem "hanami-webconsole", "~> 2.3.0"
+  gem "hanami-webconsole", github: "hanami/hanami-webconsole", branch: "main"
 end
 
 group :development, :test do
   gem "dotenv"
+  gem "rouge"
 end
 
 group :cli, :development do
-  gem "hanami-reloader", "~> 2.3.0"
+  gem "hanami-reloader", github: "hanami/hanami-reloader", branch: "main"
 end
 
 group :cli, :development, :test do
-  gem "hanami-rspec", "~> 2.3.0"
+  gem "hanami-rspec", github: "hanami/hanami-rspec", branch: "main"
 end
 
 group :test do
